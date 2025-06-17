@@ -16,14 +16,14 @@ typedef struct quiz_question {
     struct quiz_question *next;
 } QuizQuestion;
 
-extern void initialize_quiz();
-extern void add_question_to_file(const char *filename, const char *text, uint8_t difficulty, const char *options[], uint8_t correct_index);
-extern void edit_question_in_file(const char *filename, int question_number, const char *newText, uint8_t new_difficulty, const char *newOptions[], uint8_t newCorrect_index);
-extern void save_questions_to_file(const char *filename);
-extern void cleanup_quiz();
-extern void load_questions(const char *filename, char options[4][100], char* text, int* correct_option, int* difficulty, bool* found, int desired_difficulty);
-extern void print_questions(const char *filename, bool print_answers, bool print_difficulty);
-extern void load_random_question(const char *filename, char options[4][100], char *text, int *correct_option, int *difficulty);extern void interactive_edit_question(const char *filename);
-extern void interactive_edit_question(const char *filename);
+ void initialize_quiz();
+ void add_question_to_file(const char *filename, const char *text, uint8_t difficulty, const char *options[], uint8_t correct_index);
+ void edit_question_in_file(const char *filename, int question_number, const char *newText, uint8_t new_difficulty, const char *newOptions[], uint8_t newCorrect_index);
+ void save_questions_to_file(const char *filename);
+ void cleanup_quiz();
+ void load_questions(const char *filename, char options[4][100], char* text, int* correct_option, int* difficulty, bool* found, int desired_difficulty);
+ void print_questions(const char *filename, bool print_answers, bool print_difficulty);
+ void load_random_question(const char *filename, char options[4][100], char *text, int *correct_option, int *difficulty);extern void interactive_edit_question(const char *filename);
+ void interactive_edit_question(const char *filename);
 
 #endif
