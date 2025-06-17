@@ -205,8 +205,13 @@ int menu() {
                         }
                     } while (1);
                 }
-                printf("Pozdravleniq! Premina vsichki vuprosi!\n");
-                break;
+               printf("\n");
+            printf("POZDRAVLENIQ! SPECHELI 1 MILION!\n");
+            printf("Ti otgovori na vsichki %d vuprosa!\n", question_count);
+            printf("\n");
+            printf("Natisni Enter za izhod...\n");
+            getchar();
+            break;
             }
             case 2:
                 printf("\nPravila:\n- 10 vyprosa\n- 3 jokera\n- edin praven otgovor\n");

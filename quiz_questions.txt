@@ -152,10 +152,157 @@ Koga se razpada SSR?
 1999
 1
 9
-sffr
-wee
-ee
-e
-e
+Koq e stolicana na Ispaniq ?
+Barcelona
+Paris
+Madrid 
+Milano
 2
+0
+Koq e stolicata na Kuba?
+Berlin
+Tokyo
+Lisbon
+Havana
+3
+0
+Koy e nay-lekiyat element v periodichnata tablica?
+Vodorod
+Kislorod
+Vaglerod
+Azot
+0
 1
+Koy e otkril Amerika prez 1492 godina?
+Hristofor Kolumb
+Vasko da Gama
+Fernando Magelan
+Dzheyms Kuk
+0
+2
+Kakva e priblizitelnata stoynost na chisloto pi?
+3.14
+2.17
+1.61
+4.20
+0
+3
+Koe e nay-golyamoto tyalo v Slanchevata sistema?
+Slance
+Yupiter
+Zemya
+Mars
+0
+4
+Koy e avtorat na piesata 'Hamlet'?
+Heminguey
+Shekspir
+Gyote
+Bayron
+1
+5
+Kolko kraka ima payak?
+6
+7
+8
+9
+2
+6
+Koy ot izbroenite e markirasht ezik, a ne programen?
+Python
+C++
+HTML
+Java
+2
+7
+Koya strana e izvestna sas severnoto siyanie i fiordite?
+Norvegiya
+Finlandiya
+Shveciya
+Daniya
+0
+8
+Koga se razpada SSR?
+1989
+1991
+2001
+1999
+1
+9
+Koq e stolicana na Ispaniq ?
+Barcelona
+Paris
+Madrid 
+Milano
+2
+0
+Koq e stolicata na Kuba?
+Berlin
+Tokyo
+Lisbon
+Havana
+3
+0
+Koy e nay-lekiyat element v periodichnata tablica?
+Vodorod
+Kislorod
+Vaglerod
+Azot
+0
+1
+Koy e otkril Amerika prez 1492 godina?
+Hristofor Kolumb
+Vasko da Gama
+Fernando Magelan
+Dzheyms Kuk
+0
+2
+Kakva e priblizitelnata stoynost na chisloto pi?
+3.14
+2.17
+1.61
+4.20
+0
+3
+Koe e nay-golyamoto tyalo v Slanchevata sistema?
+Slance
+Yupiter
+Zemya
+Mars
+0
+4
+Koy e avtorat na piesata 'Hamlet'?
+Heminguey
+Shekspir
+Gyote
+Bayron
+1
+5
+Kolko kraka ima payak?
+6
+7
+8
+9
+2
+6
+Koy ot izbroenite e markirasht ezik, a ne programen?
+Python
+C++
+HTML
+Java
+2
+7
+Koya strana e izvestna sas severnoto siyanie i fiordite?
+Norvegiya
+Finlandiya
+Shveciya
+Daniya
+0
+8
+Koga se razpada SSR?
+1989
+1991
+2001
+1999
+1
+9
