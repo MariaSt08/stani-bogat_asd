@@ -212,7 +212,7 @@ void print_questions(const char *filename, bool print_answers, bool print_diffic
     fclose(file);
 }
 
-void load_random_question(const char *filename, char options[4][100], char *text, int *correct_option, int *difficulty) {
+/*void load_random_question(const char *filename, char options[4][100], char *text, int *correct_option, int *difficulty) {
     FILE *file = fopen(filename, "r");
     if (!file) return;
 
@@ -254,6 +254,7 @@ void load_random_question(const char *filename, char options[4][100], char *text
 
     fclose(file);
 }
+*/
 
 void interactive_edit_question(const char *filename) {
     FILE *file = fopen(filename, "r");

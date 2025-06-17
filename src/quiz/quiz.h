@@ -23,7 +23,7 @@ typedef struct quiz_question {
  void cleanup_quiz();
  void load_questions(const char *filename, char options[4][100], char* text, int* correct_option, int* difficulty, bool* found, int desired_difficulty);
  void print_questions(const char *filename, bool print_answers, bool print_difficulty);
- void load_random_question(const char *filename, char options[4][100], char *text, int *correct_option, int *difficulty);extern void interactive_edit_question(const char *filename);
+// void load_random_question(const char *filename, char options[4][100], char *text, int *correct_option, int *difficulty);extern void interactive_edit_question(const char *filename);
  void interactive_edit_question(const char *filename);
 
 #endif
