@@ -17,9 +17,11 @@ void add_question_to_file(const char *filename, const char *text, uint8_t diffic
     }
 
     new_question->question_text = strdup(text);
+
     for (int i = 0; i < 4; i++) {
         new_question->options[i] = strdup(options[i]);
     }
+
     new_question->correct_option_index = correct_index;
     new_question->difficulty = difficulty;
     new_question->next = head;
@@ -37,13 +39,13 @@ void add_question_to_file(const char *filename, const char *text, uint8_t diffic
     }
     fprintf(file, "%d\n", correct_index);
     fprintf(file, "%d\n", difficulty);
-
     fclose(file);
 }
 
 void edit_question_in_file(const char *filename, int question_number, const char *newText, uint8_t new_difficulty, const char *newOptions[], uint8_t newCorrect_index) {
     FILE *file = fopen(filename, "r");
     if (!file) return;
+
     FILE *temp_file = fopen("temp.txt", "w");
     if (!temp_file) {
         fclose(file);
@@ -122,12 +124,15 @@ void load_questions(const char *filename, char options[4][100], char *text, int 
     int questions_with_desired_difficulty = 0;
 
     while (fgets(buffer, sizeof(buffer), file)) {
-        strcpy(text, buffer); text[strcspn(text, "\n")] = '\0';
+        strcpy(text, buffer);
+        text[strcspn(text, "\n")] = '\0';
+
         for (int i = 0; i < 4; i++) {
             fgets(buffer, sizeof(buffer), file);
             strcpy(options[i], buffer);
             options[i][strcspn(options[i], "\n")] = '\0';
         }
+
         fgets(buffer, sizeof(buffer), file);
         *correct_option = atoi(buffer);
         fgets(buffer, sizeof(buffer), file);
@@ -149,13 +154,17 @@ void load_questions(const char *filename, char options[4][100], char *text, int 
     fseek(file, 0, SEEK_SET);
 
     int count = 0;
+
     while (fgets(buffer, sizeof(buffer), file)) {
-        strcpy(text, buffer); text[strcspn(text, "\n")] = '\0';
+        strcpy(text, buffer);
+        text[strcspn(text, "\n")] = '\0';
+
         for (int i = 0; i < 4; i++) {
             fgets(buffer, sizeof(buffer), file);
             strcpy(options[i], buffer);
             options[i][strcspn(options[i], "\n")] = '\0';
         }
+
         fgets(buffer, sizeof(buffer), file);
         *correct_option = atoi(buffer);
         fgets(buffer, sizeof(buffer), file);
@@ -222,15 +231,18 @@ void load_random_question(const char *filename, char options[4][100], char *text
     srand(time(NULL));
     int target = rand() % count;
     fseek(file, 0, SEEK_SET);
-
     count = 0;
+
     while (fgets(buffer, sizeof(buffer), file)) {
-        strcpy(text, buffer); text[strcspn(text, "\n")] = '\0';
+        strcpy(text, buffer);
+        text[strcspn(text, "\n")] = '\0';
+
         for (int i = 0; i < 4; i++) {
             fgets(buffer, sizeof(buffer), file);
             strcpy(options[i], buffer);
             options[i][strcspn(options[i], "\n")] = '\0';
         }
+
         fgets(buffer, sizeof(buffer), file);
         *correct_option = atoi(buffer);
         fgets(buffer, sizeof(buffer), file);
@@ -254,11 +266,10 @@ void interactive_edit_question(const char *filename) {
     char questions[100][256];
     int question_count = 0;
 
-    // Зареждане на всички въпроси (първите редове)
     while (fgets(buffer, sizeof(buffer), file)) {
         buffer[strcspn(buffer, "\n")] = '\0';
         strcpy(questions[question_count], buffer);
-        for (int i = 0; i < 6; i++) fgets(buffer, sizeof(buffer), file); // прескачане на другите редове
+        for (int i = 0; i < 6; i++) fgets(buffer, sizeof(buffer), file);
         question_count++;
     }
     fclose(file);
@@ -283,7 +294,6 @@ void interactive_edit_question(const char *filename) {
         return;
     }
 
-    // Четене на избрания въпрос отново
     file = fopen(filename, "r");
     if (!file) return;
 
@@ -295,19 +305,22 @@ void interactive_edit_question(const char *filename) {
 
     while (fgets(buffer, sizeof(buffer), file)) {
         if (current_question == choice) {
-            strcpy(text, buffer); text[strcspn(text, "\n")] = '\0';
+            strcpy(text, buffer);
+            text[strcspn(text, "\n")] = '\0';
+
             for (int i = 0; i < 4; i++) {
                 fgets(buffer, sizeof(buffer), file);
                 strcpy(options[i], buffer);
                 options[i][strcspn(options[i], "\n")] = '\0';
             }
+
             fgets(buffer, sizeof(buffer), file);
             correct_index = atoi(buffer);
             fgets(buffer, sizeof(buffer), file);
             difficulty = atoi(buffer);
             break;
         } else {
-            for (int i = 0; i < 7; i++) fgets(buffer, sizeof(buffer), file);
+            for (int i = 0; i < 6; i++) fgets(buffer, sizeof(buffer), file);
             current_question++;
         }
     }
@@ -393,4 +406,3 @@ void interactive_edit_question(const char *filename) {
     edit_question_in_file(filename, choice, text, difficulty, newOptions, correct_index);
     printf("Redakciqta e zavurshena.\n");
 }
-    
